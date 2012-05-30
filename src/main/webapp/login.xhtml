@@ -3,11 +3,11 @@
 	xmlns:ui="http://java.sun.com/jsf/facelets" template="/template/main.xhtml">
 
 	<ui:define name="body">
-		<h:form>
-			<h:inputText value="#{credentials.username}" />
-			<h:inputSecret value="#{credentials.password}" />
+		<form method="post" action="j_security_check">
+			<input type="text" id="username" name="j_username" />
+			<input type="password" id="password" name="j_password" />
 			
-			<h:commandButton value="Logar" action="#{securityContext.login}" />
-		</h:form>
+			<input type="submit" value="Logar" />
+		</form>
 	</ui:define>
 </ui:composition>

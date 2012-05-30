@@ -29,5 +29,28 @@
 		</web-resource-collection>
 		<auth-constraint />
 	</security-constraint>
-	
+
+	<security-constraint>
+		<display-name>Controle de acesso com o JAAS</display-name>
+		<web-resource-collection>
+			<web-resource-name>Area Protegida</web-resource-name>
+			<description>Limita o acesso a todos os recursos JSF</description>
+			<url-pattern>*.jsf</url-pattern>
+		</web-resource-collection>
+		<auth-constraint>
+			<role-name>*</role-name>
+		</auth-constraint>
+	</security-constraint>
+
+	<login-config>
+		<auth-method>FORM</auth-method>
+		<form-login-config>
+			<form-login-page>/login.xhtml</form-login-page>
+			<form-error-page>/login.xhtml</form-error-page>
+		</form-login-config>
+	</login-config>
+
+	<security-role>
+		<role-name>*</role-name>
+	</security-role>
 </web-app>

@@ -36,6 +36,12 @@
 			<scope>compile</scope>
 		</dependency>
 		<dependency>
+			<groupId>br.gov.frameworkdemoiselle.component</groupId>
+			<artifactId>demoiselle-authorization</artifactId>
+			<scope>compile</scope>
+		</dependency>
+		
+		<dependency>
 			<groupId>org.powermock</groupId>
 			<artifactId>powermock-api-easymock</artifactId>
 			<scope>test</scope>
